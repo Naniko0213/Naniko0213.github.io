@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link href="img/favicon.ico" rel="shortcut icon">
+<title>D-LABEL-一站式智能数据众包服务中介</title>
+<meta name="description" content="D-label是提供AI数据的一站式生产平台，通过众包模式提供数据采集、数据标注、数据提取、数据校验、数据清洗等服务，为人工智能领域提供更准确、更高效的数据集。" />
+<meta name="keywords" content="D-label,ai数据生产平台,数据采集,数据标注,数据集" /><link href="css/css.css" rel="stylesheet" />
+<script src="js/jquery.js"></script>
+</head>
+<body>
+<div class="pagehead clean">
+<div class="layer">
+<div class="fl"><img src="img/logo.svg" /></div>
+<ul class="fr clean">
+<li><a href="index.html">首页</a></li>
+<li><a href="srv.html">服务</a></li>
+<li><a href="app.html">APP</a></li>
+<li><a href="mark.html"  class="active">标注平台</a></li>
+<li>联系我们：D-label@163.com</li>
+</ul>
+</div>
+</div>
+<div class="layer brief">
+<div class="fl">
+<div class="txttitle"><a href="https://labelstud.io/" class="active">Label Studio</a></div>
+<div class="txtsplit"></div>
+<div class="txtbrief">Label Studio支持多类型数据标注，是最灵活的数据标注工具之一，且可以快速安装，支持构建自定义ui或使用预先构建的标记模板。</div>
+</div>
+<div class="fr">
+<img src="img/label-studio_缩小.png" />
+</div>
+</div>
+<div class="layer brief">
+<div class="fl">
+<img src="img/labelImg.png" />
+</div>
+<div class="fr">
+    <div class="txttitle"><a href="https://github.com/tzutalin/labelImg" class="active">LabelImg</a></div>
+<div class="txtsplit"></div>
+<div class="txtbrief">LabelImg是一款最为主流的图像标注软件，在github上已有17.3k star，支持多种任务的标注格式导出。它采用Python编写的，并使用Qt作为其图形界面。</div>
+</div>
+</div>
+<div class="layer brief">
+<div class="fl">
+<div class="txttitle"><a href="http://brat.nlplab.org/index.html" class="active">Brat</a></div>
+<div class="txtsplit"></div>
+<div class="txtbrief">Brat是一款在Linux下搭载的用于NLP领域标注的工具，支持实体、关系、属性自定义，且支持web端在线标注，使用体验感非常好。</div>
+</div>
+<div class="fr">
+<img src="img/brat.png" />
+</div>
+</div>
+
+<script>
+        $(function () {
+            $(".support li").each(function (index, item) {
+                if (index == 3 || index == 7) {
+                    $(item).css("margin-right", "0");
+                }
+            })
+
+            if (typeof (Worker) == undefined) {
+                $(".srvitem").css("top", "16px");
+                $(".description").css("top", "200px");
+                $(".support li").hover(function (event) {
+                    var $srvitem = $(this).find(".srvitem");
+                    var $description = $(this).find(".description");
+                    $srvitem.animate({ "top": "-90px" }, 700);
+                    $description.animate({ "top": "0" }, 700);
+                },
+                    function (event) {
+                        var $srvitem = $(this).find(".srvitem");
+                        var $description = $(this).find(".description");
+                        $srvitem.animate({ "top": "16px" }, 700);
+                        $description.animate({ "top": "200px" }, 700);
+                    });
+            }
+        })
+    </script>
+<script src="js/svgpng.js"></script>
+</body>
+</html>
